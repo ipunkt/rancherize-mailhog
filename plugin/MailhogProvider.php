@@ -34,6 +34,6 @@ class MailhogProvider implements Provider {
 		 */
 		$dispatcher = $this->container['event'];
 		$listener = $this->container[EventHandler::class];
-		$dispatcher->addListener( MainServiceBuiltEvent::class, [$listener, 'built'] );
+		$dispatcher->addListener( MainServiceBuiltEvent::NAME, [$listener, 'built'] );
 	}
 }
