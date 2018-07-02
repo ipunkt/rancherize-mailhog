@@ -20,6 +20,6 @@
     "ipunkt/rancherize": "^2.23.5"
   },
   "extra":{
-    "rancherize-provider":"RancherizePhp53\\Php53Provider"
+    "rancherize-provider":"RancherizeMailhog\\MailhogProvider"
   }
 }
