@@ -1,4 +1,4 @@
-<?php
+<?php namespace RancherizeMailhog;
 
 use Rancherize\Blueprint\Events\MainServiceBuiltEvent;
 use Rancherize\Plugin\Provider;
