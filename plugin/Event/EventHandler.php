@@ -24,12 +24,12 @@ class EventHandler {
 	}
 
 	/**
-	 * @param InfrastructureBuiltEvent $event
+	 * @param MainServiceBuiltEvent $event
 	 */
 	public function built( MainServiceBuiltEvent $event ) {
 
 		$mainService = $event->getMainService();
-		$configuration = $event->getConfiguration();
+		$configuration = $event->getEnvironmentConfiguration();
 
 		$mailhogConfig = $this->configParser->parse( $configuration );
 		if ( !$mailhogConfig->isEnabled() )
