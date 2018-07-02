@@ -1,0 +1,25 @@
+{
+  "name": "ipunkt/rancherize-mailhog",
+  "description": "Rancherize plugin to add mailhog as a mailing endpoint for local development",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sven Speckmaier",
+      "email": "sps@ipunkt.biz"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "RancherizeMailhog\\": "plugin/"
+    }
+  },
+
+  "require": {},
+  "require-dev": {
+    "ipunkt/rancherize": "^2.23.5"
+  },
+  "extra":{
+    "rancherize-provider":"RancherizePhp53\\Php53Provider"
+  }
+}
