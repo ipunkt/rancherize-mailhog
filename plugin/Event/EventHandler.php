@@ -42,6 +42,7 @@ class EventHandler {
 		$mainService->addLink( $mailhogService, 'mailhog' );
 		$mainService->setEnvironmentVariable( 'MAIL_HOST', 'mailhog' );
 		$mainService->setEnvironmentVariable( 'MAIL_PORT', '1025' );
+		$mainService->setEnvironmentVariable( 'SMTP_SERVER', 'mailhog:1025' );
 		if ( $mailhogConfig->isExposed() )
 			$mailhogService->expose( 8025, $mailhogConfig->getPort() );
 
