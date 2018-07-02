@@ -22,7 +22,10 @@ class ConfigParser {
 			return $config;
 
 		$config->setEnabled( true );
-		$config->setPort( $mailhogConfiguration->get('port') );
+		if ( $mailhogConfiguration->has( 'port' ) )
+			$config->setExposed( true );
+
+		$config->setPort( $mailhogConfiguration->get( 'port' ) );
 
 		return $config;
 

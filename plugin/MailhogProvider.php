@@ -1,8 +1,8 @@
 <?php
 
+use Rancherize\Blueprint\Events\MainServiceBuiltEvent;
 use Rancherize\Plugin\Provider;
 use Rancherize\Plugin\ProviderTrait;
-use Rancherize\Services\BuildServiceEvent\InfrastructureBuiltEvent;
 use RancherizeMailhog\Event\EventHandler;
 use RancherizeMailhog\Parser\ConfigParser;
 use Symfony\Component\EventDispatcher\EventDispatcher;
@@ -34,6 +34,6 @@ class MailhogProvider implements Provider {
 		 */
 		$dispatcher = $this->container['event'];
 		$listener = $this->container[EventHandler::class];
-		$dispatcher->addListener( InfrastructureBuiltEvent::class, [$listener, 'built'] );
+		$dispatcher->addListener( MainServiceBuiltEvent::class, [$listener, 'built'] );
 	}
 }
