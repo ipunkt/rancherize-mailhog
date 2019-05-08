@@ -28,9 +28,15 @@ Example:
 
 ## Details
 It will set the following variables on your main service:
+
+```
 MAIL_HOST: `mailhog`
 MAIL_PORT: `1025`
 SMTP_SERVER: `mailhog:1025`
+```
 
-SMTP_SERVER enables sendmail via mailhog when using the webserver or php-cli ipunkt blueprints.
-MAIL_HOST and MAIL_PORT will cause a laravel project to send via mailhog
+`SMTP_SERVER` enables sendmail via mailhog when using the webserver or php-cli ipunkt blueprints.
+
+`MAIL_HOST` and `MAIL_PORT` will cause a laravel project to send via mailhog.
+
+You should set `MAIL_ENCRYPTION` to an empty string for laravel projects.
